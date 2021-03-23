@@ -50,5 +50,10 @@ function page_changed(event)
         
         let mposAmount = document.querySelector('.col-8');
         let roundTotal = document.querySelector('.rounded-total-value')
+
+        window.setInterval( function() {
+        let totalAmount = document.querySelector('.grand-total-value');
+        mposAmount.innerText =  totalAmount.textContent;
+        },100);
     })
 }
